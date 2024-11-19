@@ -1,0 +1,11 @@
+number = input()
+if number.startswith('+') and ' ' in number:
+    parts = number.split(' ')
+    if len(parts) == 2 and parts[0][1:].isdigit() and len(parts[0]) == 3 and parts[1].isdigit() and len(parts[1]) == 10 and sum(int(digit) for digit in parts[1]) > 0:
+        print("Correct")
+    else:
+        print("Incorrect")
+elif number.isdigit() and len(number) == 10 and sum(int(digit) for digit in number) > 0:
+    print("Correct")
+else:
+    print("Incorrect")
