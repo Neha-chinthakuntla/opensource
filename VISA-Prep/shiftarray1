@@ -1,0 +1,7 @@
+N = int(input())
+array = list(map(int, input().split()))
+if N > 0:
+    rotated_array = array[1:] + [array[0]]
+else:
+    rotated_array = array
+print(" ".join(map(str, rotated_array))
