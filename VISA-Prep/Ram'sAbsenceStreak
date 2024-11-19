@@ -1,0 +1,15 @@
+def max_consecutive_absent_days(N, attendance):
+    max_absent = 0
+    current_absent = 0
+    for day in attendance:
+        if day == 0:
+            current_absent += 1
+        else:
+            max_absent = max(max_absent, current_absent)
+            current_absent = 0
+    max_absent = max(max_absent, current_absent)  
+    return max_absent
+N = int(input().strip())
+attendance = list(map(int, input().strip().split()))
+result = max_consecutive_absent_days(N, attendance)
+print(result)
